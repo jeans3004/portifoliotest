@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 header {
@@ -10,6 +11,10 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 header h1 {
@@ -32,11 +37,19 @@ nav ul li a {
 }
 
 section {
-    padding: 2rem;
+    padding: 6rem 2rem 2rem; /* Ajuste para compensar o header fixo */
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
 }
 
 section h2 {
     color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
 }
 
 .project {
@@ -52,6 +65,8 @@ form input, form textarea {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 form button {
@@ -60,6 +75,7 @@ form button {
     border: none;
     padding: 0.7rem 1.5rem;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 footer {
@@ -70,5 +86,40 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: calc(100% - 1rem); /* Ajuste para espaçamento */
+    display: inline-block;
+}
+
+form button {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    form input[type="text"], form input[type="email"] {
+        width: calc(50% - 1rem); /* Ajuste para campo lado a lado */
+    }
+
+    form input[type="text"] {
+        margin-right: 1rem;
+    }
+
+    form button {
+        width: auto;
+        margin-left: auto;
+    }
 }
 
